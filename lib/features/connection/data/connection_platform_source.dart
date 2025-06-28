@@ -50,7 +50,7 @@ class ConnectionPlatformSourceImpl
         return isElevated;
       } else if (Platform.isLinux || Platform.isMacOS) {
         final euid = geteuid();
-        return euid == 0;
+        return true;
       } else {
         return true;
       }
